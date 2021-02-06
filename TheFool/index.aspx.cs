@@ -6,7 +6,6 @@ using System.Web.UI;
 using System.Web.UI.WebControls;
 
 namespace fool {
-
     public class game {
 
         List<string> cards;
@@ -69,21 +68,9 @@ namespace fool {
         cardsgame.Clear();
         }
 
-        //      Выбор карты для доброса, когда противник уже взял
-        public string MakeDump() {
-            string card;
-
-            for (int i = 0; i < lastcardsgame.Count; i++) {
-                for (int j = 0; j < cards.Count; j++) {
-                    if (cards[j][0] == lastcardsgame[i][0]) {
-                    card = cards[j];
-                    cards.RemoveAt(j);
-                    return card;
-                    }
-                }
-            }
-            return "NA";
-        }
+        //      ************************************************************************************** //
+        //      СЛЕДУЮЩИЕ 3 ПРОЦЕДУРЫ НУЖНО МОДИФИЦИРОВАТЬ, ЧТОБЫ ДОБИТЬСЯ БОЛЕЕ ЭФФЕКТИВНОЙ ИГРЫ БОТА //
+        //      ************************************************************************************** //
 
         //      Выброр карты для нашего хода. 
         public string MakeMove() {
@@ -120,6 +107,22 @@ namespace fool {
 
             DumpCards();                                // Если кидать больше нечего - отбой
             ToggleTurn();
+            return "NA";
+        }
+
+        //      Выбор карты для доброса, когда противник уже взял
+        public string MakeDump() {
+            string card;
+
+            for (int i = 0; i < lastcardsgame.Count; i++) {
+                for (int j = 0; j < cards.Count; j++) {
+                    if (cards[j][0] == lastcardsgame[i][0]) {
+                    card = cards[j];
+                    cards.RemoveAt(j);
+                    return card;
+                    }
+                }
+            }
             return "NA";
         }
 
@@ -162,6 +165,10 @@ namespace fool {
             adoptmode = true;
             return "NA";
             }
+
+        //      *************************************************************************************** //
+        //      ПРЕДЫДУЩИЕ 3 ПРОЦЕДУРЫ НУЖНО МОДИФИЦИРОВАТЬ, ЧТОБЫ ДОБИТЬСЯ БОЛЕЕ ЭФФЕКТИВНОЙ ИГРЫ БОТА //
+        //      *************************************************************************************** //
 
         //      Количество карт у нас на руках
         public int Length() {
