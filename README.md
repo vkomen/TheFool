@@ -41,13 +41,9 @@
 
 **Примеры строк-команд:**
 
-smartbot.ru/index.aspx?command=init&cards=&trump=&turn=
+smartbot.ru/index.aspx?command=init&cards=3c3h2d4h6d5c&trump=1s&turn=0 (передача боту изначального расклада, козыря и информации о первом ходе) 
 
-(передача боту изначального расклада, козыря и информации о первом ходе) 
-
-smartbot.ru/index.aspx?command=beat&card=8d
-
-(ход на бота картой 8d - королем бубен - с предложением отбиться)
+smartbot.ru/index.aspx?command=beat&card=8d  (ход на бота картой 8d - королем бубен - с предложением отбиться)
 
 **В ответ бот должен выдать такую XML-структуру:**
 
