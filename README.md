@@ -103,12 +103,13 @@ http://witbot.ru/index.aspx?command=beat&card=8d  (ход на бота карт
 
 Внутренняя структура объекта game
 Поля
-```     List<string> cards;				Карты на руках у бота
+```     
+        List<string> cards;				Карты на руках у бота
         List<string> cardsgone;			Карты в отбое
         List<string> cardsgame;			Карты на игровом столе
         List<string> lastcardsgame;		Копия игрового стола после того, как cardsgame ушли в отбой
 
-        string trump;				Козырь
-        bool turn;					Очередность хода
-        bool adoptmode;				Режим «взял, принимаю доброс»
+        string trump;				    Козырь
+        bool turn;					    Очередность хода
+        bool adoptmode;				    Режим «взял, принимаю доброс»
 ```
