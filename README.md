@@ -110,6 +110,6 @@ http://witbot.ru/index.aspx?command=beat&card=8d  (ход на бота карт
         List<string> lastcardsgame;		Копия игрового стола после того, как cardsgame ушли в отбой
 
         string trump;			        Козырь
-        bool turn;				   Очередность хода
+        bool turn;				        Очередность хода
         bool adoptmode;			        Режим «взял, принимаю доброс»
 ```
